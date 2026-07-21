@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1> Hi, {{ user.username }}</h1>
+{% for post in posts %} {# for every post dictionary in our post list #}
+<div>
+    <p> {{post.author.username }} says: <b>{{ post.body }}</b></p>
+</div>
+<p>Time Stamp: {{post.time}}</p>
+<hr>
+{% endfor %}
+{% endblock %}
